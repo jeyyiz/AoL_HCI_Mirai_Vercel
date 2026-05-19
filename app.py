@@ -1,23 +1,40 @@
 import os
 import numpy as np
 import joblib
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 from flask_cors import CORS
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Cukup set template_folder saja ke html, biarkan static di-handle oleh Vercel
+# Set template_folder ke 'html'
 app = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'html'))
-CORS(app)   
+CORS(app)
 
-model = joblib.load('model.pkl')
+model = joblib.load(os.path.join(BASE_DIR, 'model.pkl'))
 
 # Patch untuk kompatibilitas sklearn lintas versi
 if not hasattr(model, 'monotonic_cst'):
     model.monotonic_cst = None
 
+# ==============================================================================
+#  💥 TRICK ROUTING MANUAL ASET STATIS (AGAR CSS & GAMBAR MUNCUL DI VERCEL)
+# ==============================================================================
+@app.route('/css/<path:filename>')
+def custom_css(filename):
+    return send_from_directory(os.path.join(BASE_DIR, 'css'), filename)
+
+@app.route('/java/<path:filename>')
+def custom_java(filename):
+    return send_from_directory(os.path.join(BASE_DIR, 'java'), filename)
+
+@app.route('/assets/<path:filename>')
+def custom_assets(filename):
+    return send_from_directory(os.path.join(BASE_DIR, 'assets'), filename)
+# ==============================================================================
+
 # --- ROUTE UTAMA (Membuka Screening) ---
 @app.route('/')
+@app.route('/screening.html')
 def screening_page():
     return render_template('screening.html')
 
@@ -48,6 +65,7 @@ def predict():
 
 # --- ROUTE UNTUK HALAMAN HASIL ---
 @app.route('/positive')
+@app.route('/positive.html')
 def positive_page():
     return render_template('positive.html')
 
@@ -55,8 +73,7 @@ def positive_page():
 def negative_page():
     return render_template('negative.html')
 
-# --- TAMBAHAN ROUTE UNTUK HALAMAN LAINNYA ---
-
+# --- ROUTE HALAMAN LAINNYA ---
 @app.route('/home.html')
 @app.route('/home')
 def home_page():
@@ -91,10 +108,6 @@ def signup_page():
 @app.route('/therapists')
 def therapists_page():
     return render_template('therapists.html')
-
-@app.route('/screening.html')
-def screening_redirect():
-    return render_template('screening.html')
 
 
 if __name__ == '__main__':
