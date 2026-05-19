@@ -6,11 +6,9 @@ from flask_cors import CORS
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-app = Flask(__name__, 
-            template_folder=os.path.join(BASE_DIR, 'html'), 
-            static_folder=BASE_DIR,  
-            static_url_path='')     
-CORS(app)
+# Cukup set template_folder saja ke html, biarkan static di-handle oleh Vercel
+app = Flask(__name__, template_folder=os.path.join(BASE_DIR, 'html'))
+CORS(app)   
 
 model = joblib.load('model.pkl')
 
