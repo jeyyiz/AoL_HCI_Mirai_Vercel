@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, jsonify
-from flask_cors import CORS
-import joblib
-import numpy as np
+import os
+from flask import Flask, render_template
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__, 
-            template_folder='html', 
-            static_folder='.', 
-            static_url_path='')
+            template_folder=os.path.join(BASE_DIR, 'html'), 
+            static_folder=BASE_DIR,  
+            static_url_path='')     
 CORS(app)
 
 model = joblib.load('model.pkl')
