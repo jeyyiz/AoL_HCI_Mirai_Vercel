@@ -50,12 +50,12 @@
                         <img src="/assets/icons/filter.png" class="filter-icon" alt="filter">
                         <span>Filter by:</span>
                     </div>
-                    <button class="filter-btn active" data-filter="all">All Regions</button>
-                    <button class="filter-btn" data-filter="jakarta">Jakarta</button>
-                    <button class="filter-btn" data-filter="bogor">Bogor</button>
-                    <button class="filter-btn" data-filter="depok">Depok</button>
-                    <button class="filter-btn" data-filter="tangerang">Tangerang</button>
-                    <button class="filter-btn" data-filter="bekasi">Bekasi</button>
+                    <button class="filter-btn active" onclick="filterBy('all', this)">All Regions</button>
+                    <button class="filter-btn" onclick="filterBy('jakarta', this)">Jakarta</button>
+                    <button class="filter-btn" onclick="filterBy('bogor', this)">Bogor</button>
+                    <button class="filter-btn" onclick="filterBy('depok', this)">Depok</button>
+                    <button class="filter-btn" onclick="filterBy('tangerang', this)">Tangerang</button>
+                    <button class="filter-btn" onclick="filterBy('bekasi', this)">Bekasi</button>
                 </div>
                 <p class="results-info">Showing <span id="count">17</span> therapists</p>
             </section>
@@ -69,7 +69,7 @@
 
                 <!-- JAKARTA -->
                 <div class="therapist-card" data-region="jakarta">
-                    <img src="/assets/therapist/reza.png" alt="Dr. Reza Maulana" class="profile-circle">
+                    <img src="/assets/therapist/reza maulana.png" alt="Dr. Reza Maulana" class="profile-circle">
                     <h3>dr. Reza Maulana, Sp.KJ</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">Specializes in ASD diagnosis and behavioral therapy with 15+ years experience.</p>
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="jakarta">
-                    <img src="/assets/therapist/rizky.png" alt="Rizky Mahendra" class="profile-circle">
+                    <img src="/assets/therapist/rizky mahendra.png" alt="Rizky Mahendra" class="profile-circle">
                     <h3>Rizky Mahendra, M.Psi</h3>
                     <span class="specialty-tag">Behavioral Therapist</span>
                     <p class="card-desc">Applied Behavior Analysis (ABA) specialist for ASD.</p>
@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="jakarta">
-                    <img src="/assets/therapist/sinta.png" alt="Sinta Lestari" class="profile-circle">
+                    <img src="/assets/therapist/sinta lestari.png" alt="Sinta Lestari" class="profile-circle">
                     <h3>Sinta Lestari, Sp.KJ</h3>
                     <span class="specialty-tag">Developmental therapy and ASD early intervention</span>
                     <p class="card-desc">Applied Behavior Analysis (ABA) specialist for ASD.</p>
@@ -133,7 +133,7 @@
 
                 <!-- BOGOR -->
                 <div class="therapist-card" data-region="bogor">
-                    <img src="/assets/therapist/arief.png" alt="Arief Nugraha" class="profile-circle">
+                    <img src="/assets/therapist/arief nugraha.png" alt="Arief Nugraha" class="profile-circle">
                     <h3>Arief Nugraha, M.Psi</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">Behavioral therapy for ASD teenagers.</p>
@@ -154,7 +154,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="bogor">
-                    <img src="/assets/therapist/lina.png" alt="Lina Wijayanti" class="profile-circle">
+                    <img src="/assets/therapist/lina wijayanti.png" alt="Lina Wijayanti" class="profile-circle">
                     <h3>Lina Wijayanti, S.Ter.Ok</h3>
                     <span class="specialty-tag">Occupational Therapist</span>
                     <p class="card-desc">Sensory integration and motor skills therapy.</p>
@@ -175,7 +175,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="bogor">
-                    <img src="/assets/therapist/putri.png" alt="Putri Anggraini" class="profile-circle">
+                    <img src="/assets/therapist/putri anggraini.png" alt="Putri Anggraini" class="profile-circle">
                     <h3>Putri Anggraini, S.Psi</h3>
                     <span class="specialty-tag">Occupational Therapist</span>
                     <p class="card-desc">Early intervention Applied Behavior Analysis (ABA) therapy for ASD.</p>
@@ -196,7 +196,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="bogor">
-                    <img src="/assets/therapist/siska.png" alt="Siska Melati" class="profile-circle">
+                    <img src="/assets/therapist/siska melati.png" alt="Siska Melati" class="profile-circle">
                     <h3>Siska Melati, S.Psi</h3>
                     <span class="specialty-tag">Behavioral Therapist</span>
                     <p class="card-desc">ABA therapy and emotional regulation training.</p>
@@ -218,7 +218,7 @@
 
                 <!-- DEPOK -->
                 <div class="therapist-card" data-region="depok">
-                    <img src="/assets/therapist/anisa.png" alt="Anisa Rahma" class="profile-circle">
+                    <img src="/assets/therapist/anisa rahma.png" alt="Anisa Rahma" class="profile-circle">
                     <h3>Anisa Rahma, S.Psi</h3>
                     <span class="specialty-tag">Behavioral Therapist</span>
                     <p class="card-desc">ABA therapy for patients with ASD.</p>
@@ -239,7 +239,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="depok">
-                    <img src="/assets/therapist/maria.png" alt="Maria Felicia" class="profile-circle">
+                    <img src="/assets/therapist/maria felicia.png" alt="Maria Felicia" class="profile-circle">
                     <h3>Maria Felicia, S.Psi</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">Behavioral disorder treatment for ASD.</p>
@@ -260,7 +260,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="depok">
-                    <img src="/assets/therapist/tania.png" alt="Tania Kusuma" class="profile-circle">
+                    <img src="/assets/therapist/tania kusuma.png" alt="Tania Kusuma" class="profile-circle">
                     <h3>Tania Kusuma, M.Psi</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">Social skills and communication therapy.</p>
@@ -282,7 +282,7 @@
 
                 <!-- TANGERANG -->
                 <div class="therapist-card" data-region="tangerang">
-                    <img src="/assets/therapist/clara.png" alt="Clara Wijaya" class="profile-circle">
+                    <img src="/assets/therapist/clara wijaya.png" alt="Clara Wijaya" class="profile-circle">
                     <h3>Clara Wijaya, S.Ter.Ok</h3>
                     <span class="specialty-tag">Occupational Therapist</span>
                     <p class="card-desc">Motor skill development and sensory therapy.</p>
@@ -303,7 +303,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="tangerang">
-                    <img src="/assets/therapist/daniel.png" alt="Daniel Setiawan" class="profile-circle">
+                    <img src="/assets/therapist/daniel setiawan.png" alt="Daniel Setiawan" class="profile-circle">
                     <h3>Daniel Setiawan, S.Ter.Ok</h3>
                     <span class="specialty-tag">Occupational Therapist</span>
                     <p class="card-desc">Sensory integration and daily living skills therapy.</p>
@@ -324,7 +324,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="tangerang">
-                    <img src="/assets/therapist/felicia.png" alt="Felicia Hartono" class="profile-circle">
+                    <img src="/assets/therapist/felicia hartono.png" alt="Felicia Hartono" class="profile-circle">
                     <h3>Felicia Hartono, Sp.KJ</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">Behavioral disorder management in ASD patients.</p>
@@ -346,7 +346,7 @@
 
                 <!-- BEKASI -->
                 <div class="therapist-card" data-region="bekasi">
-                    <img src="/assets/therapist/budi.png" alt="Budi Santoso" class="profile-circle">
+                    <img src="/assets/therapist/budi santoso.png" alt="Budi Santoso" class="profile-circle">
                     <h3>Budi Santoso, M.Psi</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">Cognitive and behavioral therapy for ASD teenagers.</p>
@@ -367,7 +367,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="bekasi">
-                    <img src="/assets/therapist/maya.png" alt="Maya Sari" class="profile-circle">
+                    <img src="/assets/therapist/maya sari.png" alt="Maya Sari" class="profile-circle">
                     <h3>Maya Sari, Sp.KJ</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">ASD diagnosis and medication management.</p>
@@ -388,7 +388,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="bekasi">
-                    <img src="/assets/therapist/nadia.png" alt="Nadia Putri" class="profile-circle">
+                    <img src="/assets/therapist/nadia putri.png" alt="Nadia Putri" class="profile-circle">
                     <h3>Nadia Putri, M.Psi</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">Social skill training for ASD patients.</p>
@@ -409,7 +409,7 @@
                 </div>
 
                 <div class="therapist-card" data-region="bekasi">
-                    <img src="/assets/therapist/rian.png" alt="Rian Saputra" class="profile-circle">
+                    <img src="/assets/therapist/rian saputra.png" alt="Rian Saputra" class="profile-circle">
                     <h3>Rian Saputra, M.Psi</h3>
                     <span class="specialty-tag">Clinical Psychologist</span>
                     <p class="card-desc">Emotional regulation therapy for ASD patients.</p>
@@ -437,7 +437,7 @@
         <div class="footer-container">
             <div class="footer-brand">
                 <div class="logo">
-                    <img src="/assets/icons/logo-mirai.PNG" alt="Mirai Logo">
+                    <img src="/assets/icons/logo-mirai.png" alt="Mirai Logo">
                     <div class="logo-text">
                         <span>Mirai</span>
                         <p class="brand-subtitle">Autism Online Learning</p>
@@ -477,6 +477,32 @@
         </div>
     </footer>
 
-    <script src="/js/therapists.js"></script>
+    <script>
+        // Initialize count on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const total = document.querySelectorAll('.therapist-card').length;
+            document.getElementById('count').innerText = total;
+        });
+
+        function filterBy(region, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.therapist-card');
+            let count = 0;
+
+            cards.forEach(card => {
+                if (region === 'all' || card.dataset.region === region) {
+                    card.style.display = 'block';
+                    count++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('count').innerText = count;
+        }
+    </script>
+
 </body>
 </html>
