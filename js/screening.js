@@ -93,7 +93,7 @@ function submitAssessment() {
         answers: binaryAnswersOnly
     };
 
-    fetch('http://localhost:5000/predict', {
+    fetch('/api/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
