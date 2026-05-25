@@ -39,7 +39,7 @@ def screening_page():
     return render_template('screening.html')
 
 # --- ROUTE PREDIKSI MACHINE LEARNING ---
-@app.route('/predict', methods=['POST'])
+@app.route('/api/predict', methods=['POST'])
 def predict():
     try:
         data = request.json
