@@ -10,14 +10,6 @@
 
 .news-info { display: flex; align-items: center; gap: 20px; }
 
-.news-info h1 {
-    font-size: 32px;
-}
-
-.news-info p {
-    font-size: 16px;
-}
-
 .icon-circle-large {
     width: 60px;
     height: 60px;
@@ -36,8 +28,8 @@
     filter: brightness(0) invert(1);
 }
 
-.news-titles h1 { margin: 0; font-size: 28px; color: var(--dark-blue); }
-.news-titles p  { margin: 5px 0 0; color: var(--gray-text); }
+.news-titles h1 { margin: 0; font-size: 32px; color: var(--dark-blue); }
+.news-titles p  { margin: 5px 0 0; color: var(--gray-text); font-size: 16px; }
 
 /* Grid Sistem Utama - Berbasis 3 Kolom */
 .news-grid {
