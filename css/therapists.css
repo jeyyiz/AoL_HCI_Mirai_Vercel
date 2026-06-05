@@ -8,7 +8,51 @@
     margin-bottom: 30px;
 }
 
-.header-flex { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
+/* ==========================================================================
+   PERBAIKAN UKURAN LOGO & FONT (DISAMAKAN DENGAN NEWS)
+   ========================================================================== */
+
+/* Jarak flex container utama */
+.header-flex { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; /* Disamakan dengan gap News */
+    margin-bottom: 25px; 
+}
+
+/* Ukuran Lingkaran Diperkecil dari bawaan figma awal agar kembar dengan News */
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    background: #5B8EC4; /* Warna dasar biru link */
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Ukuran icon gambar di dalam lingkaran */
+.icon-circle img.section-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Membuat icon otomatis putih jika aslinya berwarna gelap */
+}
+
+/* Font Judul disamakan persis dengan ukuran News & Forum */
+.header-flex h1 { 
+    margin: 0; 
+    font-size: 1.4rem; 
+    color: var(--dark-blue); 
+}
+
+/* Font Deskripsi disamakan persis dengan ukuran News & Forum */
+.header-flex p { 
+    margin: 4px 0 0; 
+    color: var(--gray-text); 
+    font-size: 0.9rem; 
+}
 
 .filter-group { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
 
