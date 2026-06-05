@@ -336,13 +336,13 @@
   }
 
   .notice-box p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .therapy-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
     width: 100%;
   }
 }
