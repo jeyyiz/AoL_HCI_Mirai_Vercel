@@ -2,17 +2,24 @@
 
 .news-header-card {
     background: var(--white);
-    padding: 30px;
+    padding: 25px 30px;            /* Ukuran box luar se-Forum */
     border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-.news-info { display: flex; align-items: center; gap: 20px; }
+.news-header-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
 
 .icon-circle-large {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     background: #5B8EC4;
     border-radius: 200px;
     display: flex;
@@ -28,8 +35,21 @@
     filter: brightness(0) invert(1);
 }
 
-.news-titles h1 { margin: 0; font-size: 32px; color: var(--dark-blue); }
-.news-titles p  { margin: 5px 0 0; color: var(--gray-text); font-size: 16px; }
+/* Ukuran Font Judul disamakan dengan Forum */
+.news-header-left h1 { 
+    margin: 0; 
+    font-size: 1.4rem; 
+    color: var(--dark-blue); 
+}
+
+/* Ukuran Font Deskripsi disamakan dengan Forum */
+.news-header-left p { 
+    margin: 4px 0 0; 
+    color: var(--gray-text); 
+    font-size: 0.9rem; 
+}
+
+
 
 /* Grid Sistem Utama - Berbasis 3 Kolom */
 .news-grid {
