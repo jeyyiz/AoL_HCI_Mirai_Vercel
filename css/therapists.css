@@ -2,7 +2,7 @@
 
 .therapist-header {
     background: var(--white);
-    padding: 30px;
+    padding: 25px 30px 25px 30px;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     margin-bottom: 30px;
@@ -32,12 +32,10 @@
     flex-shrink: 0;
 }
 
-/* Ukuran icon gambar di dalam lingkaran */
 .icon-circle img.section-icon {
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Membuat icon otomatis putih jika aslinya berwarna gelap */
 }
 
 /* Font Judul disamakan persis dengan ukuran News & Forum */
