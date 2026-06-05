@@ -34,7 +34,7 @@
 }
 
 .hero-text p {
-  font-size: 16px;
+  font-size: 14px; /* Diubah menjadi 14px */
   color: var(--gray-text);
 }
 
@@ -66,8 +66,13 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.content-card p {
-  font-size: 14px;
+/* SETTINGAN UTAMA SEMUA FONT P MENJADI 14PX */
+.content-card p,
+.hero-text p,
+.info-box p,
+.notice-box p {
+  font-size: 14px !important;
+  line-height: 1.6;
 }
 
 .content-card ul{
@@ -89,11 +94,7 @@
   color: var(--dark-blue);
   font-size: 14px;
 }
-.info-box p {
-  font-size: 13px;
-  color: var(--gray-text);
-  margin: 0;
-}
+
 .info-box ul {
   margin: 10px 0 0;
   color: var(--gray-text);
@@ -151,11 +152,6 @@
   color: #2c5282;
 }
 
-.notice-box p {
-  color: #2c5282;
-  font-size: 13px;
-}
-
 .notice-box {
   background-color: #eff6ff;
   border-radius: 12px;
@@ -164,12 +160,46 @@
   margin-top: 20px;
 }
 
+/* ==========================================================================
+   PERBAIKAN STRUKTUR BELAH DUA (LIST KIRI LEBIH LEBAR & VIDEO MEPET KANAN)
+   ========================================================================== */
 .therapy-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-top: 15px;
+  display: flex;             /* Diubah dari grid ke flex agar leluasa diatur */
+  gap: 35px;                 /* Jarak pemisah kolom kiri dan kanan */
+  align-items: flex-start;
+  margin-top: 20px;
 }
 
+/* Menjadikan info box kiri mengambil ruang 65% (Jauh lebih lebar) */
+.therapy-list-wrapper {
+  flex: 55;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.therapy-list-wrapper .info-box {
+  margin-bottom: 0;          /* Reset margin bawah agar diatur seragam oleh gap */
+}
+
+/* Kolom Kanan mengambil porsi ruang 35% */
+.therapy-video-wrapper {
+  flex: 40;
+  display: flex;
+  justify-content: flex-end; /* MEMAKSA VIDEO BERGESER PENUH KE KANAN LUAR */
+}
+
+/* Ukuran video dikunci penuh mengikuti sisa kolom kanan */
+.therapy-video-wrapper iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;      /* Otomatis menghitung rasio video youtube agar proporsional */
+  border-radius: 16px;       /* Sudut membulat modern */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: none;
+}
+
+/* Video Atas (Section pertama What is Autism?) */
 .video-container {
   margin-top: 15px;
   width: 100%;
@@ -186,6 +216,9 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* ==========================================================================
+   RESPONSIVE LAYOUT FOR MOBILE
+   ========================================================================== */
 @media (max-width: 768px) {
   html,
   body {
@@ -334,13 +367,18 @@
     border-radius: 14px;
   }
 
-  .notice-box p {
-    font-size: 13px;
+  /* PAKSA LAYOUT MENJADI VERTIKAL KE BAWAH SAAT DI HP */
+  .therapy-grid {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
   }
 
-  .therapy-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+  .therapy-list-wrapper {
+    width: 100%;
+  }
+
+  .therapy-video-wrapper {
     width: 100%;
   }
 }
