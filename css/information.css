@@ -305,6 +305,7 @@
     max-width: 100%;
     padding: 16px;
     border-radius: 14px;
+    margin: 0;
   }
 
   .info-box-header {
