@@ -98,7 +98,7 @@
 
 .info-box-header h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .info-box-content {
@@ -138,6 +138,7 @@
 
 .notice-box p {
   color: #2c5282;
+  font-size: 13px;
 }
 
 .notice-box {
