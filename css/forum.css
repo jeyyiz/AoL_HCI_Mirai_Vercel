@@ -37,6 +37,24 @@
     flex-shrink: 0;
 }
 
+.icon-circle-large {
+    width: 55px;
+    height: 55px;
+    background: #5B8EC4;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-circle-large img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
 .forum-header-left h1 { 
     margin: 0; 
     font-size: 1.4rem; 
