@@ -3,39 +3,66 @@
   min-height: 80vh;
 }
 
-.page-hero {
-  padding: 20px;
+/* ==========================================================================
+   INFORMATION HEADER CARD (Kloning Persis dari News Page)
+   ========================================================================== */
+
+.info-header-card {
+    background: var(--white);
+    padding: 25px 30px;            /* Jarak box luar se-News & Forum */
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    
+    /* Menjaga lebar card agar tetap rapi sesuai layout info lama */
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
-.hero-card {
-  background: var(--white);
-  padding: 35px;
-  border-radius: 20px;
-
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
-  max-width: 1060px;
-  margin: 0 auto;
+/* Memaksa logo dan teks sejajar lurus di tengah secara horizontal */
+.info-header-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
 }
 
-.hero-icon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+/* Lingkaran Biru Logo - Ukuran & Bentuk Sama dengan News */
+.icon-circle-large {
+    width: 55px;
+    height: 55px;
+    background: #5B8EC4;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.hero-text h1 {
-  font-size: 32px;
-  color: #2d3748;
+/* Memaksa gambar icon information berubah menjadi warna putih */
+.icon-circle-large img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
-.hero-text p {
-  font-size: 14px; /* Diubah menjadi 14px */
-  color: var(--gray-text);
+/* Ukuran Font Judul disamakan dengan News & Forum */
+.info-header-left h1 { 
+    margin: 0; 
+    font-size: 1.4rem; 
+    color: var(--dark-blue); 
+}
+
+/* Ukuran Font Deskripsi disamakan dengan News & Forum */
+.info-header-left p { 
+    margin: 4px 0 0; 
+    color: var(--gray-text); 
+    font-size: 0.9rem; 
 }
 
 .section-header {
@@ -75,10 +102,6 @@
   line-height: 1.6;
 }
 
-.content-card p {
-  margin-bottom: 5px;
-}
-
 .content-card ul{
   margin: 0;
   padding-left: 20px;
@@ -94,7 +117,7 @@
 }
 
 .info-box h3 {
-  margin: 0 0 5px;
+  margin: 0 0 10px;
   color: var(--dark-blue);
   font-size: 14px;
 }
@@ -159,7 +182,7 @@
 .notice-box {
   background-color: #eff6ff;
   border-radius: 12px;
-  padding: 15px 20px;
+  padding: 20px;
   border: 1px solid #bee3f8;
   margin-top: 20px;
 }
@@ -245,43 +268,36 @@
     padding: 0 16px;
   }
 
-  .page-hero {
-    padding: 20px 16px;
-    width: 100%;
-    overflow: hidden;
+  .info-header-card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
   }
 
-  .hero-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 24px 20px;
-    border-radius: 20px;
-
-    display: flex;
-    flex-direction: column;
+  
+  .info-header-left {
+    flex-direction: column; 
+    text-align: center;    
     align-items: center;
-    text-align: center;
-    gap: 16px;
+    gap: 15px;
+     width: 100%;
   }
 
-  .hero-icon {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+  .icon-circle-large {
+    width: 45px;
+    height: 45px;
   }
 
-  .hero-text {
-    width: 100%;
+  .icon-circle-large img {
+    width: 24px;
+    height: 24px;
   }
 
-  .hero-text h1 {
-    font-size: 28px;
-    line-height: 1.2;
+  .info-header-left h1 {
+    font-size: 1.2rem; 
   }
 
-  .hero-text p {
-    font-size: 14px;
-    line-height: 1.6;
+  .info-header-left p {
+    font-size: 0.8rem;
   }
 
   .content-section {
