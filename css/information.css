@@ -55,9 +55,6 @@
   font-size: 13px;
 }
 
-.section-header p {
-  font-size: 13px;
-}
 
 .content-section {
   padding: 20px 0;
@@ -68,6 +65,15 @@
   padding: 35px;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.content-card p {
+  font-size: 13px;
+}
+
+.content-card ul{
+  margin: 0;
+  padding-left: 20px;
 }
 
 .info-box {
@@ -90,7 +96,6 @@
 }
 .info-box ul {
   margin: 10px 0 0;
-  padding-left: 20px;
   color: var(--gray-text);
   font-size: 13px;
 }
@@ -139,7 +144,7 @@
   padding-left: 20px;
   padding-top: 15px; 
   color: var(--gray-text, #718096);
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .notice-box strong {
