@@ -1,4 +1,3 @@
-<!-- forum -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -34,7 +33,6 @@
     <main class="forum-page">
         <div class="container">
 
-            <!-- HEADER FORUM -->
             <section class="forum-header-card">
                 <div class="forum-header-left">
                     <div class="forum-icon">
@@ -48,16 +46,17 @@
                 <button class="btn-forum-new" onclick="togglePostForm()">New Post</button>
             </section>
 
-            <!-- FORM CREATE POST -->
             <section id="createPostArea" class="forum-create-card" style="display: none;">
                 <h2>Create New Post</h2>
                 <div>
                     <label class="forum-label">Title</label>
                     <input type="text" id="postTitle" placeholder="What's your topic?" class="forum-input">
+                    <small id="titleError" class="forum-error-msg"></small>
                 </div>
                 <div>
                     <label class="forum-label">Content</label>
                     <textarea id="postContent" placeholder="Share your thoughts..." class="forum-textarea"></textarea>
+                    <small id="contentError" class="forum-error-msg"></small>
                 </div>
                 <div class="forum-form-actions">
                     <button class="btn-forum-new" onclick="savePost()">Post Now</button>
@@ -72,11 +71,22 @@
         </div>
     </main>
 
+    <div id="deleteModal" class="modal-overlay">
+        <div class="modal-card">
+            <h3>Delete Post?</h3>
+            <p>Are you sure you want to delete this post? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button id="btnConfirmDelete" class="btn-modal-danger">Delete</button>
+                <button onclick="closeDeleteModal()" class="btn-modal-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
                 <div class="logo">
-                    <img src="/assets/icons/logo-mirai.PNG" alt="Mirai Logo">
+                    <img src="/assets/icons/logo-mirai.png" alt="Mirai Logo">
                     <div class="logo-text">
                         <span>Mirai</span>
                         <p class="brand-subtitle">Autism Online Learning</p>
@@ -85,31 +95,31 @@
                 <p class="brand-desc">Supporting autism awareness, screening, and community connection.</p>
             </div>
             <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="screening.html">Autism Test</a></li>
-                        <li><a href="information.html">Information</a></li>
-                        <li><a href="therapists.html">Therapists</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="forum.html">Forum</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Contact Us</h4>
-                    <p class="contact-item">
-                        <img src="/assets/icons/email.png" alt="Email">
-                        <span>support@mirai-autism.org</span>
-                    </p>
-                    <p class="contact-item">
-                        <img src="/assets/icons/telephone.png" alt="Phone">
-                        <span>+62 123-4567-8911</span>
-                    </p>
-                    <p class="contact-item">
-                        <img src="/assets/icons/location.png" alt="Location">
-                        <span>Jakarta Barat, Indonesia</span>
-                    </p>
-                </div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="screening.html">Autism Test</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="therapists.html">Therapists</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p class="contact-item">
+                    <img src="/assets/icons/email.png" alt="Email">
+                    <span>support@mirai-autism.org</span>
+                </p>
+                <p class="contact-item">
+                    <img src="/assets/icons/telephone.png" alt="Phone">
+                    <span>+62 123-4567-8911</span>
+                </p>
+                <p class="contact-item">
+                    <img src="/assets/icons/location.png" alt="Location">
+                    <span>Jakarta Barat, Indonesia</span>
+                </p>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Mirai - Autism Online Learning. All rights reserved.</p>
