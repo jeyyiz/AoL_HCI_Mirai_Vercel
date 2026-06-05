@@ -1,4 +1,11 @@
-.forum-page { padding: 40px 0; min-height: 80vh; }
+/* ==========================================================================
+   BASE STYLE (Untuk Desktop & Tampilan Utama)
+   ========================================================================== */
+
+.forum-page { 
+    padding: 40px 0; 
+    min-height: 80vh; 
+}
 
 .forum-header-card {
     background: var(--white);
@@ -11,7 +18,11 @@
     margin-bottom: 25px;
 }
 
-.forum-header-left { display: flex; align-items: center; gap: 15px; }
+.forum-header-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
 
 .forum-icon {
     background: #e0e7ff;
@@ -26,8 +37,17 @@
     flex-shrink: 0;
 }
 
-.forum-header-left h1 { margin: 0; font-size: 32px; color: var(--dark-blue); }
-.forum-header-left p  { margin: 4px 0 0; color: var(--gray-text); font-size: 16px; }
+.forum-header-left h1 { 
+    margin: 0; 
+    font-size: 1.4rem; 
+    color: var(--dark-blue); 
+}
+
+.forum-header-left p { 
+    margin: 4px 0 0; 
+    color: var(--gray-text); 
+    font-size: 0.9rem; 
+}
 
 .btn-forum-new {
     background: var(--primary-blue);
@@ -41,7 +61,8 @@
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
-.btn-forum-new:hover { background: #77A7D9;    
+.btn-forum-new:hover { 
+    background: #77A7D9;     
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
 }
@@ -54,9 +75,19 @@
     margin-bottom: 25px;
 }
 
-.forum-create-card h2 { margin-top: 0; font-size: 1.1rem; color: var(--dark-blue); }
+.forum-create-card h2 { 
+    margin-top: 0; 
+    font-size: 1.1rem; 
+    color: var(--dark-blue); 
+}
 
-.forum-label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; color: #4a5568; }
+.forum-label { 
+    display: block; 
+    font-weight: 600; 
+    margin-bottom: 8px; 
+    font-size: 0.85rem; 
+    color: #4a5568; 
+}
 
 .forum-input, .forum-textarea {
     width: 100%;
@@ -70,9 +101,15 @@
     margin-bottom: 15px;
 }
 
-.forum-textarea { min-height: 120px; resize: vertical; }
+.forum-textarea { 
+    min-height: 120px; 
+    resize: vertical; 
+}
 
-.forum-form-actions { display: flex; gap: 10px; }
+.forum-form-actions { 
+    display: flex; 
+    gap: 10px; 
+}
 
 .btn-forum-cancel {
     background: transparent;
@@ -102,7 +139,10 @@
     border: 1px solid #edf2f7;
 }
 
-.text-gray { color: #718096; font-size: 0.85rem; }
+.text-gray { 
+    color: #718096; 
+    font-size: 0.85rem; 
+}
 
 .reply-item {
     background: #f8fbff;
@@ -112,7 +152,9 @@
     border-left: 3px solid #6495ED;
 }
 
-.replies-list { margin-top: 10px; }
+.replies-list { 
+    margin-top: 10px; 
+}
 
 .btn-primary {
     background: var(--primary-blue);
@@ -144,24 +186,393 @@
     transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
 }
 
-.btn-outline:hover {
+.btn-outline:hover{
     background: transparent;
     color: var(--dark-blue);
     border-color: #000;
     transform: translateY(-2px);
 }
 
-.forum-input:focus, 
-.forum-textarea:focus {
-    border-color: var(--primary-blue); 
-    background: #ffffff;              
-    outline: none;                     
-    box-shadow: 0 0 0 3px rgba(119, 167, 217, 0.2); 
+.forum-input:hover, 
+.forum-textarea:hover,
+.forum-reply-input:hover {
+    background: #e6e6e6 !important;
+    border-color: #e6e6e6 !important;
+    color: #1a202c !important;
 }
 
+.forum-input:focus, 
+.forum-textarea:focus,
 .forum-reply-input:focus {
-    border-color: var(--primary-blue) !important; 
     background: #ffffff !important;               
+    border-color: var(--primary-blue) !important; 
     outline: none !important;                     
-    box-shadow: 0 0 0 3px rgba(119, 167, 217, 0.2); 
+    box-shadow: 0 0 0 3px rgba(119, 167, 217, 0.2) !important; 
+    color: #1a202c !important;
+}
+
+.post-header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
+
+.btn-options-trigger {
+    background: transparent;
+    border: none;
+    color: #a0aec0;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0 8px;
+    line-height: 1;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-options-trigger:hover {
+    background: #edf2f7;
+    color: #2d3748;
+}
+
+.btn-options-trigger:active {
+    background: #e2e8f0;
+    transform: scale(0.95);
+}
+
+.forum-dropdown-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    min-width: 110px;
+    display: none;
+    overflow: hidden;
+}
+
+.dropdown-item {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 10px 16px;
+    text-align: left;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a5568;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background: #f7fafc;
+}
+
+.dropdown-item.edit-opt {
+    color: #6495ED;
+}
+
+.dropdown-item.delete-opt {
+    color: #e53e3e;
+}
+
+/* ==========================================================================
+   STYLING TOMBOL REPLY (Hover Efek Konsisten)
+   ========================================================================== */
+
+.btn-forum-reply {
+    background: #6495ED;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.btn-forum-reply:hover {
+    background: #77A7D9;     
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+}
+
+.btn-forum-reply:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(74, 144, 217, 0.2);
+}
+
+/* ==========================================================================
+   CUSTOM CONFIRMATION MODAL STYLE
+   ========================================================================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: var(--white);
+    padding: 35px 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 440px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: scale(0.9);
+    transition: transform 0.25s ease;
+    box-sizing: border-box;
+}
+
+.modal-overlay.active .modal-card {
+    transform: scale(1);
+}
+
+.modal-card h3 {
+    margin: 0 0 12px 0;
+    color: var(--dark-blue);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.modal-card p {
+    margin: 0 0 28px 0;
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+/* Tombol Bahaya/Delete (Merah) */
+.btn-modal-danger {
+    background: #e53e3e;
+    color: white;
+}
+
+.btn-modal-danger:hover {
+    background: #c53030;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+/* Tombol Cancel Meniru Sempurna .btn-forum-new / Post Now */
+.btn-modal-cancel {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.btn-modal-cancel:hover {
+    background: #77A7D9;     
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+}
+
+.forum-error-msg {
+    color: #e53e3e;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: -8px;
+    margin-bottom: 12px;
+    margin-left: 4px;
+    display: none;
+    animation: fadeInError 0.2s ease-in-out;
+}
+
+.reply-container .forum-error-msg {
+    margin-top: 6px;       
+    margin-bottom: 0px;
+    margin-left: 12px;
+}
+
+/* ==========================================================================
+   STYLING CENTERED TOAST POP-UP NOTIFICATION
+   ========================================================================== */
+#toastContainer {
+    position: fixed;
+    top: 10%;                  /* Muncul di area atas-tengah page */
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 99999;            /* Memastikan berada di atas modal apapun */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;      /* Supaya tidak menghalangi klik user pada element lain */
+}
+
+.toast-card {
+    background: rgba(45, 55, 72, 0.95); /* Warna charcoal gelap yang elegan + semi transparan */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 30px;       /* Bentuk kapsul modern */
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    white-space: nowrap;
+    animation: toastFadeIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* State ketika toast diperintahkan untuk hilang */
+.toast-card.fade-out {
+    animation: toastFadeOut 0.3s ease-in forwards;
+}
+
+/* Animasi Muncul: Sedikit memantul ke bawah (Pop up effect) */
+@keyframes toastFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes toastFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeInError {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .forum-page {
+        padding: 25px 0;
+    }
+
+    .forum-header-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .btn-forum-new {
+        width: 100%;
+        text-align: center;
+    }
+
+    .forum-create-card, 
+    .forum-card {
+        padding: 15px 20px;
+        border-radius: 12px;
+    }
+
+    .forum-header-left h1 {
+        font-size: 1.2rem;
+    }
+
+    .forum-header-left p {
+        font-size: 0.8rem;
+    }
+
+    .forum-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .forum-form-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .forum-form-actions button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .forum-dropdown-menu {
+        right: 0;
+        top: 32px;
+        min-width: 100px;
+    }
+
+    .dropdown-item {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .btn-options-trigger {
+        font-size: 1.2rem;
+        padding: 0 4px;
+    }
+
+    .replies-list {
+        margin-left: 5px;
+        padding-left: 10px;
+    }
+
+    .reply-box {
+        gap: 8px;
+    }
+
+    .reply-box input {
+        font-size: 12px;
+        padding: 8px 12px !important;
+    }
+
+    .btn-forum-reply {
+        padding: 0 15px !important;
+        font-size: 12px;
+    }
+
+    .modal-card {
+        padding: 25px 20px;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
