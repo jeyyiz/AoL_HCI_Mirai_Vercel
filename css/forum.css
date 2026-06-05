@@ -283,19 +283,15 @@
     color: #e53e3e;
 }
 
-/* ==========================================================================
-   STYLING TOMBOL REPLY (Hover Efek Konsisten)
-   ========================================================================== */
-
 .btn-forum-reply {
-    background: #6495ED;
+    background: var(--primary-blue);
     color: white;
     border: none;
-    padding: 0 20px;
-    border-radius: 20px;
+    padding: 10px 22px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 13px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 14px;
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
@@ -304,15 +300,6 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
 }
-
-.btn-forum-reply:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(74, 144, 217, 0.2);
-}
-
-/* ==========================================================================
-   CUSTOM CONFIRMATION MODAL STYLE
-   ========================================================================== */
 
 .modal-overlay {
     position: fixed;
