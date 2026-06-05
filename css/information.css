@@ -71,8 +71,12 @@
 .hero-text p,
 .info-box p,
 .notice-box p {
-  font-size: 14px !important;
+  font-size: 13px !important;
   line-height: 1.6;
+}
+
+.content-card p {
+  margin-bottom: 2px;
 }
 
 .content-card ul{
