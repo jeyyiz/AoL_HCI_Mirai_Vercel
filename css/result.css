@@ -152,6 +152,10 @@
     line-height: 1.6; 
 }
 
+.next-steps-card {
+    padding: 33px 60px !important; 
+}
+
 .next-steps-card h3 { 
     font-size: 20px; 
     margin: 0 0 15px; 
