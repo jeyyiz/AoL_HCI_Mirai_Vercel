@@ -27,15 +27,26 @@
     margin-bottom: 15px;
 }
 
+.gender-container{
+    display: flex;
+    gap: 20px; /* Mengatur kerenggangan antar tombol (bisa kamu naikkan jika kurang renggang) */
+    justify-content: center;
+}
+
 .btn-gender {
-    padding: 12px 35px;
+    min-width: 140px; 
+    padding: 12px 20px; /* Padding kanan-kiri dikecilkan karena lebarnya sudah diatur min-width */
     border: none;
-    border-radius: 8px;
+    border-radius: 12px; /* Dibulatkan sedikit agar lebih modern sesuai tema web Mirai */
     color: white;
     font-weight: bold;
+    font-size: 14px;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: 0.2s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-gender:hover {
