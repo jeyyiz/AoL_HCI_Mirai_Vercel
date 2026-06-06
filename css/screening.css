@@ -211,6 +211,10 @@
     margin: 0;
 }
 
+#questionTitle{
+    font-size: 16px;
+}
+
 .speaker-btn {
     background: transparent;
     border: none;
