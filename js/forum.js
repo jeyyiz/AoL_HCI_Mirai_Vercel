@@ -269,7 +269,7 @@ function loadPosts() {
             </div>
 
             <h3 style="margin: 10px 0; color: #2d3748;">${post.title}</h3>
-            <p style="color: #4a5568; line-height: 1.6;">${post.content}</p>
+            <p style="color: #4a5568; line-height: 1.6; font-size: 14px;">${post.content}</p>
             
             <div style="margin: 15px 0; font-size: 13px; color: #6495ED; font-weight: bold; display: flex; align-items: center; gap: 6px;">
                 <img src="/assets/ForumLogos/Reply.png" alt="Replies" style="width: 12px; height: 12px; object-fit: contain; vertical-align: middle;">
