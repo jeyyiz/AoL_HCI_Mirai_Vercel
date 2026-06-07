@@ -155,3 +155,63 @@
     height: 16px;
     object-fit: contain;
 }
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+
+    .therapist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .therapist-page {
+        padding: 25px 0;
+    }
+
+    .therapist-header {
+        padding: 18px;
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-circle img.section-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-flex h1 {
+        font-size: 22px;
+    }
+
+    .header-flex p {
+        font-size: 13px;
+    }
+
+    .filter-group {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
+
+    .therapist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .therapist-card {
+        padding: 20px;
+    }
+}
