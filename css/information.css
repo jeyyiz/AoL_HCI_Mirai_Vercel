@@ -1,6 +1,6 @@
 .information-page {
   padding: 40px 0;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .info-header-card {
@@ -14,10 +14,10 @@
     margin-bottom: 7px;
     
     /* Menjaga lebar card agar tetap rapi sesuai layout info lama */
-    max-width: 1060px;
+    /* max-width: 1060px;
     margin-left: auto;
     margin-right: auto;
-    box-sizing: border-box;
+    box-sizing: border-box; */
 }
 
 /* Memaksa logo dan teks sejajar lurus di tengah secara horizontal */
@@ -248,162 +248,60 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* ==========================================================================
-   RESPONSIVE LAYOUT FOR MOBILE
-   ========================================================================== */
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+
+    .therapy-grid {
+        flex-direction: column;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
 
-  * {
-    box-sizing: border-box;
-  }
+    .information-page {
+        padding: 25px 0;
+    }
 
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+    .info-header-card {
+        padding: 18px;
+    }
 
-  .container {
-    width: 100%;
-    padding: 0 16px;
-  }
+    .icon-circle-large {
+        width: 50px;
+        height: 50px;
+    }
 
-  .info-header-card {
-    padding: 15px 20px;
-    margin-bottom: 20px;
-  }
+    .icon-circle-large img {
+        width: 24px;
+        height: 24px;
+    }
 
-  
-  .info-header-left {
-    flex-direction: column; 
-    text-align: center;    
-    align-items: center;
-    gap: 15px;
-     width: 100%;
-  }
+    .info-header-left h1 {
+        font-size: 22px;
+    }
 
-  .icon-circle-large {
-    width: 45px;
-    height: 45px;
-  }
+    .info-header-left p {
+        font-size: 13px;
+    }
 
-  .icon-circle-large img {
-    width: 24px;
-    height: 24px;
-  }
+    .content-card {
+        padding: 20px;
+    }
 
-  .info-header-left h1 {
-    font-size: 1.2rem; 
-  }
+    .therapy-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-  .info-header-left p {
-    font-size: 0.8rem;
-  }
-
-  .content-section {
-    width: 100%;
-    padding: 12px 0;
-    overflow: hidden;
-  }
-
-  .content-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 22px 18px;
-    border-radius: 18px;
-  }
-
-  .content-card p,
-  .content-card li {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-
-  .content-card ul {
-    padding-left: 18px;
-  }
-
-  .section-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-
-    margin-bottom: 18px;
-  }
-
-  .section-header h2 {
-    font-size: 24px;
-    line-height: 1.3;
-  }
-
-  .icon-box {
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .icon-box img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-  }
-
-  .info-box {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px;
-    border-radius: 14px;
-    margin-bottom: 10px;
-  }
-
-  .info-box-header {
-    gap: 10px;
-  }
-
-  .info-box-header h3 {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-
-  .info-box-content {
-    margin-top: 12px;
-  }
-
-  .info-box-content ul {
-    padding-left: 18px;
-  }
-
-  .arrow img {
-    width: 18px;
-    height: 18px;
-  }
-
-  .notice-box {
-    padding: 16px;
-    border-radius: 14px;
-  }
-
-  /* PAKSA LAYOUT MENJADI VERTIKAL KE BAWAH SAAT DI HP */
-  .therapy-grid {
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .therapy-list-wrapper {
-    width: 100%;
-  }
-
-  .therapy-video-wrapper {
-    width: 100%;
-  }
+    .video-container iframe,
+    .therapy-video-wrapper iframe {
+        width: 100%;
+        height: auto;
+    }
 }
