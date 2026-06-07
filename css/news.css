@@ -129,61 +129,67 @@
     text-underline-offset: 3px;
 }
 
+/* =========================
+   TABLET
+========================= */
 @media (max-width: 992px) {
+
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
 }
 
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
+
     .news-page {
         padding: 25px 0;
     }
 
     .news-header-card {
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: 18px;
     }
 
-    .news-info {
-        flex-direction: column; 
-        text-align: center;    
-        gap: 15px;
+    .icon-circle-large {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-circle-large img {
+        width: 24px;
+        height: 24px;
     }
 
     .news-titles h1 {
-        font-size: 1.6rem; 
+        font-size: 22px;
     }
 
     .news-titles p {
-        font-size: 0.9rem;
+        font-size: 13px;
     }
 
     .news-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .news-card {
-        border-radius: 15px; 
     }
 
     .card-image {
-        height: 180px; 
+        height: 180px;
     }
 
     .card-content {
-        padding: 15px; 
+        padding: 15px;
     }
 
     .card-content h3 {
-        font-size: 1.1rem; 
-        margin-bottom: 8px;
+        font-size: 16px;
     }
 
     .card-content p {
         font-size: 13px;
-        margin-bottom: 15px;
     }
+
 }
