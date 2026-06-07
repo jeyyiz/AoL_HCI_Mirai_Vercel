@@ -245,73 +245,67 @@
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+
     .home-page .hero {
-        flex-direction: column;
-        padding: 50px 24px;
-        text-align: center;
+        padding: 60px 5%;
         gap: 30px;
     }
-    
-    .hero-content {
-        max-width: 100%;
+
+    .home-page .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    
+
+    .home-page .services-grid .service-card:nth-child(4),
+    .home-page .services-grid .service-card:nth-child(5) {
+        grid-column: auto;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .home-page .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 24px;
+    }
+
     .hero-content h1 {
         font-size: 1.8rem;
     }
 
-    .hero-image { 
-        justify-content: center; 
-        max-width: 100%;
+    .hero-image {
+        justify-content: center;
         width: 80%;
     }
-    
-    .hero-buttons { 
-        justify-content: center; 
-        gap: 15px;
-    }
-    
-    .hero-badges { 
-        justify-content: center; 
-        gap: 25px;
+
+    .hero-buttons,
+    .hero-badges {
+        justify-content: center;
     }
 
-    .services { 
-        padding: 50px 24px; 
-    }
-    
-    .home-page .services-grid { 
-        grid-template-columns: 1fr; 
-        gap: 16px;
-    }
-    
-    .home-page .services-grid .service-card:nth-child(4),
-    .home-page .services-grid .service-card:nth-child(5) { 
-        grid-column: auto; 
+    .services {
+        padding: 50px 24px;
     }
 
-    .about-blue { 
-        padding: 40px 20px; 
+    .home-page .services-grid {
+        grid-template-columns: 1fr;
     }
-    
-    .about-blue-inner { 
-        flex-direction: column; 
-        text-align: center; 
+
+    .about-blue-inner {
+        flex-direction: column;
         gap: 30px;
-        padding: 40px 24px; 
     }
-    
+
     .about-blue-image {
         max-width: 260px;
-    }
-    
-    .about-blue-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .about-blue-content p {
-        font-size: 0.9rem;
-        margin-bottom: 20px;
+        margin: auto;
     }
 }
