@@ -494,94 +494,224 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+
+    .forum-page {
+        padding: 30px 0;
+    }
+
+    .forum-header-card,
+    .forum-create-card,
+    .forum-card {
+        padding: 20px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
+
     .forum-page {
         padding: 25px 0;
     }
 
+    /* =====================
+       HEADER CARD
+    ===================== */
+
     .forum-header-card {
+        padding: 18px;
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 15px;
-        padding: 15px 20px;
     }
 
-    .btn-forum-new {
-        width: 100%;
-        text-align: center;
+    .forum-header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 
-    .forum-create-card, 
-    .forum-card {
-        padding: 15px 20px;
-        border-radius: 12px;
+    .icon-circle-large {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .icon-circle-large img {
+        width: 24px;
+        height: 24px;
     }
 
     .forum-header-left h1 {
-        font-size: 1.2rem;
+        font-size: 22px;
+        margin: 0;
     }
 
     .forum-header-left p {
-        font-size: 0.8rem;
+        font-size: 13px;
+        margin-top: 4px;
     }
 
-    .forum-icon {
-        width: 42px;
-        height: 42px;
-        font-size: 20px;
+    /* =====================
+       NEW POST BUTTON
+    ===================== */
+
+    .btn-forum-new {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 13px;
+        border-radius: 8px;
     }
+
+    /* =====================
+       CREATE POST CARD
+    ===================== */
+
+    .forum-create-card {
+        padding: 18px;
+    }
+
+    .forum-create-card h2 {
+        font-size: 18px;
+    }
+
+    .forum-label {
+        font-size: 13px;
+    }
+
+    .forum-input,
+    .forum-textarea {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .forum-textarea {
+        min-height: 100px;
+    }
+
+    /* =====================
+       FORM BUTTONS
+    ===================== */
 
     .forum-form-actions {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
     }
 
     .forum-form-actions button {
         width: 100%;
-        text-align: center;
     }
 
+    .btn-primary,
+    .btn-outline,
+    .btn-forum-cancel {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    /* =====================
+       FORUM POSTS
+    ===================== */
+
+    .forum-card {
+        padding: 18px;
+    }
+
+    .forum-card h3 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .forum-card p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .text-gray {
+        font-size: 12px;
+    }
+
+    /* =====================
+       REPLIES
+    ===================== */
+
+    .reply-item {
+        padding: 10px 12px;
+    }
+
+    .reply-item p {
+        font-size: 13px;
+    }
+
+    .reply-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .reply-box input,
+    .btn-forum-reply {
+        width: 100%;
+    }
+
+    .btn-forum-reply {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    /* =====================
+       DROPDOWN MENU
+    ===================== */
+
     .forum-dropdown-menu {
-        right: 0;
-        top: 32px;
         min-width: 100px;
     }
 
     .dropdown-item {
-        padding: 8px 12px;
         font-size: 12px;
+        padding: 10px 14px;
     }
 
-    .btn-options-trigger {
-        font-size: 1.2rem;
-        padding: 0 4px;
-    }
-
-    .replies-list {
-        margin-left: 5px;
-        padding-left: 10px;
-    }
-
-    .reply-box {
-        gap: 8px;
-    }
-
-    .reply-box input {
-        font-size: 12px;
-        padding: 8px 12px !important;
-    }
-
-    .btn-forum-reply {
-        padding: 0 15px !important;
-        font-size: 12px;
-    }
+    /* =====================
+       MODAL
+    ===================== */
 
     .modal-card {
         padding: 25px 20px;
     }
-    
+
+    .modal-card h3 {
+        font-size: 20px;
+    }
+
+    .modal-card p {
+        font-size: 13px;
+    }
+
     .modal-actions {
         flex-direction: column;
-        gap: 8px;
+    }
+
+    .modal-actions button {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    /* =====================
+       TOAST
+    ===================== */
+
+    .toast-card {
+        font-size: 13px;
+        padding: 10px 18px;
+        max-width: 90vw;
+        white-space: normal;
     }
 }
