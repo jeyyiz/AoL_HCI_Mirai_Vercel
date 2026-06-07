@@ -1,4 +1,4 @@
-.home-page .hero {
+.home-banner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,12 +8,12 @@
     min-height: 420px;
 }
 
-.hero-content {
+.banner-content {
     flex: 1;
     max-width: 520px;
 }
 
-.hero-content h1 {
+.banner-content h1 {
     font-size: 2.2rem;
     font-weight: 800;
     color: #1a202c;
@@ -21,27 +21,27 @@
     margin: 0 0 16px;
 }
 
-.hero-content p {
+.banner-content p {
     color: var(--gray-text);
     font-size: 0.95rem;
     line-height: 1.7;
     margin: 0 0 28px;
 }
 
-.hero-buttons {
+.banner-actions {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 32px;
 }
 
-.hero-badges {
+.banner-features {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
 }
 
-.badge {
+.feature-badge {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -51,13 +51,13 @@
     line-height: 1.4;
 }
 
-.badge img {
+.feature-badge img {
     width: 35px;
     height: 35px;
     object-fit: contain;
 }
 
-.hero-image {
+.banner-image {
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -65,7 +65,7 @@
     max-width: 420px;
 }
 
-.hero-image img {
+.banner-image img {
     width: 100%;
     max-width: 400px;
     object-fit: contain;
@@ -153,14 +153,14 @@
     text-decoration: underline; 
 }
 
-.about-blue {
+.early-support {
     width: 100%;
     background: transparent;
     padding: 10px 20px; 
     box-sizing: border-box;
 }
 
-.about-blue-inner {
+.early-support-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -176,32 +176,32 @@
     box-sizing: border-box;
 }
 
-.about-blue-image {
+.early-support-image {
     flex: 1;
     max-width: 350px;
     display: flex;
     justify-content: center;
 }
 
-.about-blue-image img {
+.early-support-image img {
     width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
 }
 
-.about-blue-content { 
+.early-support-content { 
     flex: 1.2; 
 }
 
-.about-blue-content h2 {
+.early-support-content h2 {
     font-size: 1.8rem;
     font-weight: 800;
     color: #1a202c;
     margin: 0 0 16px;
 }
 
-.about-blue-content p {
+.early-support-content p {
     color: #4a5568;
     font-size: 0.95rem;
     line-height: 1.7;
@@ -250,7 +250,7 @@
 ========================= */
 @media (max-width: 992px) {
 
-    .home-page .hero {
+    .home-banner {
         padding: 60px 5%;
         gap: 30px;
     }
@@ -271,23 +271,23 @@
 ========================= */
 @media (max-width: 768px) {
 
-    .home-page .hero {
+    .home-banner {
         flex-direction: column;
         text-align: center;
         padding: 50px 24px;
     }
 
-    .hero-content h1 {
+    .banner-content h1 {
         font-size: 1.8rem;
     }
 
-    .hero-image {
+    .banner-image {
         justify-content: center;
         width: 80%;
     }
 
-    .hero-buttons,
-    .hero-badges {
+    .banner-actions,
+    .banner-features {
         justify-content: center;
     }
 
@@ -299,12 +299,12 @@
         grid-template-columns: 1fr;
     }
 
-    .about-blue-inner {
+    .early-support-wrapper{
         flex-direction: column;
         gap: 30px;
     }
 
-    .about-blue-image {
+    .early-support-image {
         max-width: 260px;
         margin: auto;
     }
