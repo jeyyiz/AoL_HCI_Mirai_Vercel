@@ -219,7 +219,7 @@ function addReply(postId) {
             time: "Just now"
         });
         localStorage.setItem('mirai_posts', JSON.stringify(posts));
-        showToast("Successfully addded reply!");
+        showToast("Successfully added reply!");
         loadPosts(); 
     }
 }
