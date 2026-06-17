@@ -43,8 +43,6 @@
 
     <main class="therapist-page">
         <div class="container">
-
-            <!-- Header & Filter Section -->
                         <section class="therapist-header">
                 <div class="header-flex">
                     <div class="icon-circle">
@@ -75,10 +73,8 @@
                 <strong>Please Note:</strong> This directory is for informational purposes. We recommend verifying credentials and insurance coverage before scheduling appointments. Always consult with your healthcare provider for personalized recommendations.
             </div>
 
-            <!-- Cards Grid -->
             <div class="therapist-grid" id="therapistGrid">
 
-                <!-- JAKARTA -->
                 <div class="therapist-card" data-region="jakarta">
                     <img src="/assets/therapist/reza.png" alt="Dr. Reza Maulana" class="profile-circle">
                     <h3>dr. Reza Maulana, Sp.KJ</h3>
@@ -142,7 +138,6 @@
                     </div>
                 </div>
 
-                <!-- BOGOR -->
                 <div class="therapist-card" data-region="bogor">
                     <img src="/assets/therapist/arief.png" alt="Arief Nugraha" class="profile-circle">
                     <h3>Arief Nugraha, M.Psi</h3>
@@ -227,7 +222,6 @@
                     </div>
                 </div>
 
-                <!-- DEPOK -->
                 <div class="therapist-card" data-region="depok">
                     <img src="/assets/therapist/anisa.png" alt="Anisa Rahma" class="profile-circle">
                     <h3>Anisa Rahma, S.Psi</h3>
@@ -291,7 +285,6 @@
                     </div>
                 </div>
 
-                <!-- TANGERANG -->
                 <div class="therapist-card" data-region="tangerang">
                     <img src="/assets/therapist/clara.png" alt="Clara Wijaya" class="profile-circle">
                     <h3>Clara Wijaya, S.Ter.Ok</h3>
@@ -355,7 +348,6 @@
                     </div>
                 </div>
 
-                <!-- BEKASI -->
                 <div class="therapist-card" data-region="bekasi">
                     <img src="/assets/therapist/budi.png" alt="Budi Santoso" class="profile-circle">
                     <h3>Budi Santoso, M.Psi</h3>
@@ -489,7 +481,6 @@
     </footer>
 
     <script>
-        // Initialize count on page load
         window.addEventListener('DOMContentLoaded', () => {
             const total = document.querySelectorAll('.therapist-card').length;
             document.getElementById('count').innerText = total;
