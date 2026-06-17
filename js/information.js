@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Ambil seluruh element header di dalam info-box yang bertindak sebagai accordion
   const accordionHeaders = document.querySelectorAll(
     ".accordion-item .info-box-header",
   );
