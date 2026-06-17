@@ -1,5 +1,5 @@
 let editPostId = null;
-let postToDeleteId = null; // Menyimpan ID post terpilih yang akan dieksekusi
+let postToDeleteId = null; 
 
 function togglePostForm() {
     const area = document.getElementById('createPostArea');
@@ -36,7 +36,6 @@ window.addEventListener('click', function() {
     });
 });
 
-// LOGIC EDIT
 function editPost(postId) {
     let posts = JSON.parse(localStorage.getItem('mirai_posts')) || [];
     const postToEdit = posts.find(p => p.id === postId);
@@ -150,7 +149,6 @@ function savePost() {
     loadPosts();
 }
 
-// LOGIC TRIGGER MODAL DELETE
 function deletePost(postId) {
     postToDeleteId = postId; 
     
@@ -167,7 +165,6 @@ function deletePost(postId) {
     }
 }
 
-// EKSEKUSI PENGHAPUSAN ASLI
 function executeDelete() {
     if (postToDeleteId === null) return;
 
@@ -224,7 +221,6 @@ function addReply(postId) {
     }
 }
 
-// RENDER DASHBOARD MAIN CONTENT
 function loadPosts() {
     const container = document.getElementById('forumContainer');
     if (!container) return;
@@ -310,7 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', loadPosts);
 
 function showToast(message) {
-    // 1. Buat elemen container toast jika belum ada
     let toastContainer = document.getElementById('toastContainer');
     if (!toastContainer) {
         toastContainer = document.createElement('div');
@@ -318,18 +313,14 @@ function showToast(message) {
         document.body.appendChild(toastContainer);
     }
 
-    // 2. Buat box pop-up baru
     const toastCard = document.createElement('div');
     toastCard.className = 'toast-card';
     toastCard.textContent = message;
 
-    // 3. Masukkan ke dalam container
     toastContainer.appendChild(toastCard);
 
-    // 4. Hapus pop-up dari layar secara otomatis setelah 2.5 detik
     setTimeout(() => {
         toastCard.classList.add('fade-out');
-        // Tunggu animasi fade-out selesai (0.3s), lalu hapus elemen dari DOM
         toastCard.addEventListener('animationend', () => {
             toastCard.remove();
         });
