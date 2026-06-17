@@ -108,14 +108,12 @@
     transition: all 0.2s ease-in-out; 
 }
 
-/* State Hover: Berubah menjadi abu-abu medium saat kursor mendekat */
 .input-group input:hover {
     background: #e6e6e6 !important;
     border-color: #e6e6e6 !important;
     color: #1a202c !important;
 }
 
-/* State Focus (Active): Kembali putih bersih + glow biru khas Mirai saat mulai mengetik */
 .input-group input:focus {
     background: #ffffff !important;              
     border-color: var(--primary-blue) !important; 
@@ -124,7 +122,6 @@
     color: #1a202c !important;
 }
 
-/* KONDISI ERROR (Tetap Dipertahankan & Dipastikan Aman dari Tabrakan Hover) */
 .input-group.error input {
     border-color: #ef4444 !important;
     background-color: #fff5f5 !important;
