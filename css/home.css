@@ -245,9 +245,6 @@
     transform: translateY(-2px);
 }
 
-/* =========================
-   TABLET
-========================= */
 @media (max-width: 992px) {
 
     .home-banner {
@@ -266,11 +263,7 @@
 
 }
 
-/* =========================
-   MOBILE
-========================= */
 @media (max-width: 768px) {
-
     .home-banner {
         flex-direction: column;
         text-align: center;
