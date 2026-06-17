@@ -1,7 +1,3 @@
-/* ==========================================================================
-   BASE STYLE (Untuk Desktop & Tampilan Utama)
-   ========================================================================== */
-
 .forum-page { 
     padding: 40px 0; 
     min-height: 80vh; 
@@ -319,10 +315,6 @@
     box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
 }
 
-/* ==========================================================================
-   CUSTOM CONFIRMATION MODAL STYLE
-   ========================================================================== */
-
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -392,7 +384,6 @@
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
-/* Tombol Bahaya/Delete (Merah) */
 .btn-modal-danger {
     background: #e53e3e;
     color: white;
@@ -404,7 +395,6 @@
     box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
 }
 
-/* Tombol Cancel Meniru Sempurna .btn-forum-new / Post Now */
 .btn-modal-cancel {
     background: var(--primary-blue);
     color: white;
@@ -433,26 +423,23 @@
     margin-left: 12px;
 }
 
-/* ==========================================================================
-   STYLING CENTERED TOAST POP-UP NOTIFICATION
-   ========================================================================== */
 #toastContainer {
     position: fixed;
-    top: 10%;                  /* Muncul di area atas-tengah page */
+    top: 10%;        
     left: 50%;
     transform: translate(-50%, 0);
-    z-index: 99999;            /* Memastikan berada di atas modal apapun */
+    z-index: 99999;    
     display: flex;
     flex-direction: column;
     gap: 10px;
-    pointer-events: none;      /* Supaya tidak menghalangi klik user pada element lain */
+    pointer-events: none;
 }
 
 .toast-card {
-    background: rgba(45, 55, 72, 0.95); /* Warna charcoal gelap yang elegan + semi transparan */
+    background: rgba(45, 55, 72, 0.95);
     color: #ffffff;
     padding: 12px 24px;
-    border-radius: 30px;       /* Bentuk kapsul modern */
+    border-radius: 30px;
     font-size: 14px;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -461,12 +448,10 @@
     animation: toastFadeIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-/* State ketika toast diperintahkan untuk hilang */
 .toast-card.fade-out {
     animation: toastFadeOut 0.3s ease-in forwards;
 }
 
-/* Animasi Muncul: Sedikit memantul ke bawah (Pop up effect) */
 @keyframes toastFadeIn {
     from {
         opacity: 0;
@@ -494,9 +479,6 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================
-   TABLET
-========================= */
 @media (max-width: 992px) {
 
     .forum-page {
@@ -511,18 +493,11 @@
 
 }
 
-/* =========================
-   MOBILE
-========================= */
 @media (max-width: 768px) {
 
     .forum-page {
         padding: 25px 0;
     }
-
-    /* =====================
-       HEADER CARD
-    ===================== */
 
     .forum-header-card {
         padding: 18px;
@@ -559,20 +534,12 @@
         margin-top: 4px;
     }
 
-    /* =====================
-       NEW POST BUTTON
-    ===================== */
-
     .btn-forum-new {
         width: 100%;
         padding: 10px 16px;
         font-size: 13px;
         border-radius: 8px;
     }
-
-    /* =====================
-       CREATE POST CARD
-    ===================== */
 
     .forum-create-card {
         padding: 18px;
@@ -596,10 +563,6 @@
         min-height: 100px;
     }
 
-    /* =====================
-       FORM BUTTONS
-    ===================== */
-
     .forum-form-actions {
         flex-direction: column;
         gap: 10px;
@@ -615,10 +578,6 @@
         padding: 10px;
         font-size: 13px;
     }
-
-    /* =====================
-       FORUM POSTS
-    ===================== */
 
     .forum-card {
         padding: 18px;
@@ -637,10 +596,6 @@
     .text-gray {
         font-size: 12px;
     }
-
-    /* =====================
-       REPLIES
-    ===================== */
 
     .reply-item {
         padding: 10px 12px;
@@ -666,10 +621,6 @@
         font-size: 13px;
     }
 
-    /* =====================
-       DROPDOWN MENU
-    ===================== */
-
     .forum-dropdown-menu {
         min-width: 100px;
     }
@@ -678,10 +629,6 @@
         font-size: 12px;
         padding: 10px 14px;
     }
-
-    /* =====================
-       MODAL
-    ===================== */
 
     .modal-card {
         padding: 25px 20px;
@@ -703,10 +650,6 @@
         width: 100%;
         font-size: 13px;
     }
-
-    /* =====================
-       TOAST
-    ===================== */
 
     .toast-card {
         font-size: 13px;
