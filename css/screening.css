@@ -29,15 +29,15 @@
 
 .gender-container{
     display: flex;
-    gap: 20px; /* Mengatur kerenggangan antar tombol (bisa kamu naikkan jika kurang renggang) */
+    gap: 20px;
     justify-content: center;
 }
 
 .btn-gender {
     min-width: 140px; 
-    padding: 12px 20px; /* Padding kanan-kiri dikecilkan karena lebarnya sudah diatur min-width */
+    padding: 12px 20px; 
     border: none;
-    border-radius: 12px; /* Dibulatkan sedikit agar lebih modern sesuai tema web Mirai */
+    border-radius: 12px; 
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -243,9 +243,6 @@
     margin: 0;                
 }
 
-/* =========================
-   TABLET
-========================= */
 @media (max-width: 992px) {
 
     .test-intro {
@@ -269,10 +266,7 @@
     }
 
 }
- 
-/* =========================
-   TABLET
-========================= */
+
 @media (max-width: 992px) {
 
     .gender-container {
@@ -281,9 +275,6 @@
 
 }
 
-/* =========================
-   MOBILE
-========================= */
 @media (max-width: 768px) {
 
     .test-intro {
@@ -347,9 +338,6 @@
     }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
 @media (max-width: 480px) {
 
     #prevBtn,
