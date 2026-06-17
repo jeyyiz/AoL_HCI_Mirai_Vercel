@@ -5,29 +5,21 @@
 
 .info-header-card {
     background: var(--white);
-    padding: 25px 30px;            /* Jarak box luar se-News & Forum */
+    padding: 25px 30px;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     margin-bottom: 7px;
-    
-    /* Menjaga lebar card agar tetap rapi sesuai layout info lama */
-    /* max-width: 1060px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box; */
 }
 
-/* Memaksa logo dan teks sejajar lurus di tengah secara horizontal */
 .info-header-left { 
     display: flex; 
     align-items: center; 
     gap: 15px; 
 }
 
-/* Lingkaran Biru Logo - Ukuran & Bentuk Sama dengan News */
 .icon-circle-large {
     width: 55px;
     height: 55px;
@@ -39,7 +31,6 @@
     flex-shrink: 0;
 }
 
-/* Memaksa gambar icon information berubah menjadi warna putih */
 .icon-circle-large img {
     width: 32px;
     height: 32px;
@@ -47,14 +38,12 @@
     filter: brightness(0) invert(1);
 }
 
-/* Ukuran Font Judul disamakan dengan News & Forum */
 .info-header-left h1 { 
     margin: 0; 
     font-size: 1.4rem; 
     color: var(--dark-blue); 
 }
 
-/* Ukuran Font Deskripsi disamakan dengan News & Forum */
 .info-header-left p { 
     margin: 4px 0 0; 
     color: var(--gray-text); 
@@ -77,7 +66,6 @@
   padding-left: 20px;
 }
 
-/* Khusus untuk teks bacaan/informasi panjang agar ekstra nyaman dibaca */
 .lead-text {
     line-height: 25px !important;
     font-size: 14px !important;   
@@ -95,7 +83,6 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* SETTINGAN UTAMA SEMUA FONT P MENJADI 14PX */
 .content-card p,
 .hero-text p,
 .info-box p {
@@ -192,17 +179,13 @@
   margin-top: 20px;
 }
 
-/* ==========================================================================
-   PERBAIKAN STRUKTUR BELAH DUA (LIST KIRI LEBIH LEBAR & VIDEO MEPET KANAN)
-   ========================================================================== */
 .therapy-grid {
-  display: flex;             /* Diubah dari grid ke flex agar leluasa diatur */
-  gap: 35px;                 /* Jarak pemisah kolom kiri dan kanan */
+  display: flex;             
+  gap: 35px;                 
   align-items: flex-start;
   margin-top: 20px;
 }
 
-/* Menjadikan info box kiri mengambil ruang 65% (Jauh lebih lebar) */
 .therapy-list-wrapper {
   flex: 55;
   display: flex;
@@ -211,27 +194,24 @@
 }
 
 .therapy-list-wrapper .info-box {
-  margin-bottom: 0;          /* Reset margin bawah agar diatur seragam oleh gap */
+  margin-bottom: 0;         
 }
 
-/* Kolom Kanan mengambil porsi ruang 35% */
 .therapy-video-wrapper {
   flex: 40;
   display: flex;
-  justify-content: flex-end; /* MEMAKSA VIDEO BERGESER PENUH KE KANAN LUAR */
+  justify-content: flex-end; 
 }
 
-/* Ukuran video dikunci penuh mengikuti sisa kolom kanan */
 .therapy-video-wrapper iframe {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;      /* Otomatis menghitung rasio video youtube agar proporsional */
-  border-radius: 16px;       /* Sudut membulat modern */
+  aspect-ratio: 16 / 9;     
+  border-radius: 16px;       
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: none;
 }
 
-/* Video Atas (Section pertama What is Autism?) */
 .video-container {
   margin-top: 15px;
   width: 100%;
@@ -248,9 +228,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* =========================
-   TABLET
-========================= */
 @media (max-width: 992px) {
 
     .therapy-grid {
@@ -259,9 +236,6 @@
 
 }
 
-/* =========================
-   MOBILE
-========================= */
 @media (max-width: 768px) {
 
     .information-page {
