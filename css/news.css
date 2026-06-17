@@ -2,7 +2,7 @@
 
 .news-header-card {
     background: var(--white);
-    padding: 25px 30px;            /* Ukuran box luar se-Forum */
+    padding: 25px 30px;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
@@ -35,23 +35,18 @@
     filter: brightness(0) invert(1);
 }
 
-/* Ukuran Font Judul disamakan dengan Forum */
 .news-header-left h1 { 
     margin: 0; 
     font-size: 1.4rem; 
     color: var(--dark-blue); 
 }
 
-/* Ukuran Font Deskripsi disamakan dengan Forum */
 .news-header-left p { 
     margin: 4px 0 0; 
     color: var(--gray-text); 
     font-size: 0.9rem; 
 }
 
-
-
-/* Grid Sistem Utama - Berbasis 3 Kolom */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -129,9 +124,6 @@
     text-underline-offset: 3px;
 }
 
-/* =========================
-   TABLET
-========================= */
 @media (max-width: 992px) {
 
     .news-grid {
@@ -141,9 +133,6 @@
 
 }
 
-/* =========================
-   MOBILE
-========================= */
 @media (max-width: 768px) {
 
     .news-page {
